@@ -1,0 +1,47 @@
+.loading-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading_icon {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+  }
+  
+  .loading {
+    margin-top: 20px; /* Espacio entre la imagen y el texto de carga */
+    text-align: center;
+    font-size: 1.2rem; /* Tamaño de fuente */
+  }
+  
+  .card-Home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-Home {
+    padding: 0 10px;
+  }
+  
+  .landing-button {
+    margin-top: 20px; /* Espacio entre los elementos */
+    padding: 10px 20px; /* Espacio interno del botón */
+    background-color: #4caf50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde sin estilo */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+  }
+  
+  .landing-button:hover {
+    background-color: #45a049; /* Cambio de color de fondo al pasar el cursor */
+  }

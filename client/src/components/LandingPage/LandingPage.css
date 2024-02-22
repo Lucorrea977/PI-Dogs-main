@@ -1,0 +1,64 @@
+/* LandingPage.css */
+
+/* Estilos generales */
+.landing-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://futbol.radioformula.com.mx/resizer/w0UJczUuAWouBEeB7XmgSVSM2to=/1200x675/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/radioformula/POXBAICPYBEDDBOFIGDDLBA32Q.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+    background-color: #f0f0f0; /* Color de fondo de respaldo */
+}
+
+.landing-image {
+    text-align: center;
+}
+
+.landing-text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.landing-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.landing-button:hover {
+    background-color: #0056b3;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .landing-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .landing-text {
+        font-size: 1rem;
+    }
+}

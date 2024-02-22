@@ -91,7 +91,7 @@ La idea de este proyecto es construir una aplicación web a partir de la API [**
 
 **IMPORTANTE**: para poder utilizar la API es necesario crear una cuenta y obtener una ApiKey que luego deberá ser incluida en todos los request que hagamos. Esto se logra simplemente agregando **`?api_key={YOUR_API_KEY}`** al final de cada end-point. Agregar la clave en el archivo **`.env`** para que la misma no se suba al repositorio por cuestiones de seguridad.
 
-### **Únicos end-points que se pueden utilizar**
+### **Únicos end-points que se queen utilizar**
 
 -  [**TheDogApi**](https://api.thedogapi.com/v1/breeds)
 -  **Search By 'Raza':** _"https://api.thedogapi.com/v1/breeds/search?q={raza_perro}"_
@@ -147,7 +147,7 @@ Tu servidor deberá contar con las siguientes rutas:
 #### **📍 GET | /dogs/:idRaza**
 
 -  Esta ruta obtiene el detalle de una raza específica. Es decir que devuelve un objeto con la información pedida en el detalle de un perro.
--  La raza es recibida por parámetro (ID).
+-  La raza es recibida por parquetry (ID).
 -  Tiene que incluir los datos de los temperamentos asociadas a esta raza.
 -  Debe funcionar tanto para los perros de la API como para los de la base de datos.
 
