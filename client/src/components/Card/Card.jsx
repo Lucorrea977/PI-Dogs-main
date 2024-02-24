@@ -11,14 +11,14 @@ export default function Card({ name, image, temperament, weight, id }) {
                         src={image}
                         alt="Not found"
                         className="card_image"
-                        width="200px"
+                        width="100px"
                         height="250px"
                     />
                 </div>
                 <div className="card_contenido">
                     <h3 className="card_name">{name}</h3>
-                    <div className="card_data">
-                        <p>Temperament: </p>
+                    <div className="card_temp">
+                        <p>TEMPERAMENT: </p>
                         <p>{temperament}</p>
                     </div>
                     <div className="card_data">Weight: {weight} kg</div>

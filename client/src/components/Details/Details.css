@@ -1,150 +1,107 @@
-/* Estilos base */
-a:link,
-a:visited a:active {
-  text-decoration: none;
+.contenedor-SearchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: rgba(153, 158, 226, 0.5);
+  color:rgba(153, 158, 232, 0.5);
 }
 
 .contenedor_searchBar--details {
-  margin: 0 10px;
+  background-color: #b8afe4; 
 }
 
-.details_links--home {
-  padding-top: 5px;
-}
-
-.contenedor-Details {
-  margin: auto;
-  width: 60%;
-  height: 70%;
-  margin: 30px auto;
+.searchBar-contenador-nav {
   display: flex;
-  flex-direction: row;
-  padding: 10px;
-  background: linear-gradient(#e09f3e, #dba657);
-  justify-content: space-around;
-  border-radius: 15px;
-  box-shadow: -8px 10px 8px rgb(0, 0, 0);
+  align-items: center;
+  background-color:rgb(146, 120, 237);
 }
 
-.details_name {
-  color: #fff;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0);
-  display: block ruby;
-}
 
-.details_name_icon {
-  color: #fff;
-  margin: 10px 0 0 7px;
+.searchBar_icon {
   width: 30px;
   height: 30px;
-  filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
-}
-
-.img-Details {
-  width: 300px;
-  height: 300px;
-  margin: 3px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 5px #000;
-}
-
-.contenido-Details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #1c0d02;
-  font-weight: 500;
-  left: 0;
-  width: 40%;
-}
-
-.details_items {
-  margin: 10px 0;
-  width: 100%;
-}
-
-.details_subtitle {
-  display: flex;
-  width: 100%;
-  margin-left: 30px;
-}
-
-.details_icons {
-  margin: 4px 0 0 6px;
+  margin-right: 10px;
 }
 
 .details_link {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  height: 35px;
-  padding-right: 5px;
-  position: relative;
+  margin-right: 10px;
+  transition: color 0.3s ease;
 }
 
-.details_link::after {
-  content: "";
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.details_link:hover::after {
-  transform: scaleX(1);
-}
-
-.details_link::before {
-  margin-left: 3px;
-  content: "";
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
-  position: absolute;
-  right: 0;
-  width: 1px;
-  height: 35px;
-  background: #000;
-  transform: scaleY(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.details_link:hover::before {
-  transform: scaleY(1);
+.details_link:hover {
+  color: rgb(138, 125, 199); /* Cambio de color al pasar el ratón */
 }
 
 .details_text {
-  font-family: "Dongle", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  color: #1c0d02;
-}
-
-.details_home {
-  width: 100px;
+  font-size: 16px;
 }
 
 .details_create {
-  width: 180px;
+  color: #050506; /* Color del botón CREATE YOUR DOG */
+
 }
 
-@media (max-width: 600px) {
-  .details_name {
-    display: flex;
-    margin-bottom: 10px;
-  }
+.details_home {
+  color: #020202; /* Color del botón HOME */
+}
 
-  .contenedor-Details {
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-  }
+.details_name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+ 
+  
+}
 
-  .contenido-Details {
-    width: 100%;
+.details_name_icon {
+  width: 50px;
+  height:40px;
+  margin-right: 200px;
+}
+
+.details_contenedor_img {
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.img-Details {
+  max-width: 35%;
+  height: auto;
+  border-radius: 50px;
+}
+
+.contenido-Details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+ background-color: #b9b9d9;
+}
+
+.details_items {
+  border: 5px solid #09090a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.details_subtitle {
+  margin-bottom: 60px;
+}
+
+.details_icons {
+  margin-right: 50px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .contenedor-SearchBar {
+    padding: 10px;
   }
 }
+

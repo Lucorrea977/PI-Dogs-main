@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link, } from 'react-router-dom';
+import { Link,  useParams} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDetails } from '../../redux/actions/index';
 import Loading from '../../assets/Loading.gif';
@@ -14,10 +14,11 @@ export default function Details(props) {
     const dispatch = useDispatch();
 
     const dogsDetails = useSelector((state) => state.details);
+    const { id } = useParams(); 
 
     useEffect(() => {
-        dispatch(getDetails(props.match.params.id))
-    }, [props.match.params.id, dispatch])
+        dispatch(getDetails(id));
+    }, [id, dispatch]);
 
     return (
         <div>
@@ -82,17 +83,23 @@ export default function Details(props) {
                         <p>{dogsDetails[0].life_span} years</p>
                         }
                     </div>
-                   <div className='details_items'>
-                        <h3 className='details_subtitle'>Temperament <MdOutlineAddReaction className='details_icons'/> </h3>
-                        <p>{dogsDetails.temperament? dogsDetails.temperament
-                        : dogsDetails[0].temperaments.map(t => t.name + (' '))}</p>
-                   </div>
+                    <div className='details_items'>
+    <h3 className='details_subtitle'>Temperament <MdOutlineAddReaction className='details_icons'/> </h3>
+    <p>
+        {dogsDetails.temperament ? 
+            dogsDetails.temperament : 
+            (dogsDetails[0].temperaments ? 
+                dogsDetails[0].temperaments.map(t => t.name + (' ')) : 
+                'No temperament information available')
+        }
+    </p>
+</div>
                     </div>
                 </div>
                 </div> :
                 <div>
                     <img src={Loading} alt="" className='loading_icon'/>
-                        <h3 className="loading">LOADING...</h3>
+                      
                     </div>
             }
         </div>

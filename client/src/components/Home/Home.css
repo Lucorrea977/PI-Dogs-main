@@ -4,44 +4,55 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    background-color:  rgba(153, 158, 232, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .loading_icon {
-    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: auto;
-  }
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 30vh; /* Ajusta la altura al 30% del viewport */
+    width: 30vh; /* Ajusta el ancho al 30% del viewport */
+    background-color: #ffffff; /* Color de fondo del icono */
+    border-radius: 50%; 
+    margin-left: 5px;
   
-  .loading {
-    margin-top: 20px; /* Espacio entre la imagen y el texto de carga */
-    text-align: center;
-    font-size: 1.2rem; /* Tamaño de fuente */
   }
   
   .card-Home {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: fantasy;
+    background-color: rgba(153, 158, 232, 0.5);
+
   }
   
   .nav-Home {
-    padding: 0 10px;
+    padding: 0 0px;
+    background-color: rgba(79, 86, 188, 0.5);
+
   }
   
   .landing-button {
-    margin-top: 20px; /* Espacio entre los elementos */
-    padding: 10px 20px; /* Espacio interno del botón */
-    background-color: #4caf50; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Borde sin estilo */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    background-color: black;
+    color:rgba(153, 158, 232, 0.5);  ;
+    border: none;
+    padding: 20px 20px;
+    font-size: 1.2rem;
+    font-family: fantasy;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+   
+   
   }
-  
-  .landing-button:hover {
-    background-color: #45a049; /* Cambio de color de fondo al pasar el cursor */
+  .landing-button{
+        padding-left: 48%;
+        padding-top: 5px;
+        background-color: azure;
+        color: black;
   }

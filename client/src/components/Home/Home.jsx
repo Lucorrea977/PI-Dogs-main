@@ -41,7 +41,7 @@ export default function Home() {
       <div className="loading-background">
         <img src={Loadingbar} className="loading_icon" alt="Please wait" />
         <br />
-        <h3 className="loading">Loading...</h3>
+      
       </div>
     );
   }
@@ -92,7 +92,7 @@ export default function Home() {
       )}
 
       <Link to="/">
-        <button className="landing-button">Go to Landing Page</button>
+        <button className="landing-button"> Back Landing </button>
       </Link>
     </div>
   );

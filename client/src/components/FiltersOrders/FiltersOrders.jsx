@@ -4,7 +4,7 @@ import { getDogs } from '../../redux/actions/index';
 import CreateOrNo from './FilterOrder/CreateOrNo/CreateOrNo';
 import Order from './FilterOrder/Order/Order';
 import Temperament from './FilterOrder/Temperament/Temperament';
-import HomeGif from '../../assets/HomeGif.gif'
+
 import './FiltersOrders.css'
 
 export default function FiltersOrders({pagina, set}) {
@@ -21,7 +21,7 @@ export default function FiltersOrders({pagina, set}) {
         <nav className='contendor-filters'>
             <div className="contenido-filters">
             <button onClick={e => {handleClick(e)}} className='filtersOrders_button_icon'>
-            <img src={HomeGif} alt="" className='filtersOrders_icon' />
+         
             </button>
                <div>
                <Order

@@ -5,7 +5,7 @@
   .SearchBar-contenador-nav {
     position: relative;
     z-index: 2;
-    background-color: #e09f3e;
+    background-color: #9c87e7;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,9 +18,11 @@
   }
   
   .SearchBar_icon {
-    width: 50px;
+    width: 30px;
     height: 50px;
-    margin: 0 30px 0 10px;
+    margin: 0 50px 0 30px;
+ 
+  
   }
   
   .SearchBar_create-sm {
@@ -32,7 +34,7 @@
     border: none;
     cursor: pointer;
     width: 180px;
-    height: 35px;
+    height: 10px;
     padding-right: 5px;
     position: relative;
   }
@@ -45,7 +47,7 @@
     bottom: 0;
     width: 100%;
     height: 1px;
-    background: #000;
+    background: #0b0a0a;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
   }
@@ -72,10 +74,11 @@
   }
   
   .SearchBar_text {
-    font-family: "Dongle", sans-serif;
-    font-size: 25px;
+    font-family: fantasy;
+    font-size: 15px;
     font-weight: 700;
-    color: #1c0d02;
+    color: #040302;
+ 
   }
   
   .SearchBar-logo {
@@ -91,6 +94,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
   }
   
   .SearchBar-img {
@@ -117,13 +121,13 @@
   }
   
   .SearchBar_search input {
-    width: 0;
+    width: 15px;
     height: 35px;
     padding: 0 10px;
     font-size: 15px;
     color: #1c0d02;
     outline: none;
-    border: 1px solid #fff;
+    border: 1px solid #f2e9e9;
     border-radius: 30px;
     transition: all 0.6s ease;
     background-color: #fff3b0;
@@ -133,7 +137,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #000;
+    background-color: #070707;
     width: 43px;
     height: 43px;
     line-height: 55px;
@@ -147,7 +151,7 @@
   
   .Search_btn-submit {
     background: transparent;
-    color: #fff;
+    color: #5b53e5;
     width: 43px;
     height: 43px;
     font-size: 20px;
@@ -184,6 +188,7 @@
   
     .SearchBar-contenador-nav {
       justify-content: unset;
+    
     }
   
     .SearchBar-create-icon {

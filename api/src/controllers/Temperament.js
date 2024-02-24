@@ -1,4 +1,4 @@
-const axios = require ("axios");
+const axios = require("axios");
 const { Temperament } = require("../db");
 
 const getTemperaments = async (req, res, next) => {

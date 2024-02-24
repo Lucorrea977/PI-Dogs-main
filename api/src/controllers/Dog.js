@@ -1,3 +1,4 @@
+
 const axios = require("axios");
 const { Dog, Temperament } = require("../db");
 
@@ -80,7 +81,7 @@ const getDogById = async (req, res, next) => {
       res.status(200).send(filter);
     } else {
       const api = await axios(
-        `https://api.thedogapi.com/v1/breeds?api_key=${process.env.API_KEY}`
+        ` https://api.thedogapi.com/v1/breeds?api_key=${process.env.API_KEY}`
       );
       const infoApi = api.data.map((response) => {
         return {
@@ -103,7 +104,6 @@ const getDogById = async (req, res, next) => {
     next(err);
   }
 };
-
 
 const createDog = async (req, res, next) => {
   try {

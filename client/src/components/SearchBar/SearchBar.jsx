@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getDogs, getName } from "../../redux/actions/index";
-import menu from "../../assets/menu.png";
-import FiltersOrders from "../FiltersOrders/FiltersOrders.jsx";
+
 import icon from "../../assets/collar-de-perro.png";
+import FiltersOrders from "../FiltersOrders/FiltersOrders.jsx";
+
 import { HiSearch } from "react-icons/hi";
 import "./SearchBar.css";
 
@@ -30,12 +31,7 @@ export default function SearchBar({ pagina, set }) {
     setName("");
   }
 
-  function handleClick(e) {
-    let app = document.getElementById("filterId-nav");
-    if (app.classList.contains("filters-nav__inside"))
-      app.classList.remove("filters-nav__inside");
-    else app.classList.add("filters-nav__inside");
-  }
+
 
   return (
     <nav className="contenedor-SearchBar">
@@ -75,13 +71,6 @@ export default function SearchBar({ pagina, set }) {
               </div>
             </form>
           </div>
-          <img
-            src={menu}
-            className="SearchBar-img"
-            id="SearchBar-img"
-            onClick={handleClick}
-            alt="Not do found"
-          ></img>
         </div>
       </div>
       <div className="filters-nav" id="filterId-nav">

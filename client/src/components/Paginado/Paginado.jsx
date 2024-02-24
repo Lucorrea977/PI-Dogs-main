@@ -38,7 +38,7 @@ export default function Paginado({ dogsPage, allDogs, paginado, currentPage }) {
                             className='paginado_current paginado'>
                             {currentPage}
                         </button>
-                        <p className="paginado_text--numbertotal">of</p>
+                        
                         <button className='paginado_current paginado'>
                             {paginadoTotal}
                         </button>

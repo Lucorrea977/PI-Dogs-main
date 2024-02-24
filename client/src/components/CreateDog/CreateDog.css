@@ -1,36 +1,36 @@
 /* CreateDog.css */
 .create_contenedor {
     position: relative;
-    width: 60%;
+    width: 30%;
     height: max-content;
     left: 0;
     top: 0;
-    margin: 30px auto;
+    margin: 20px auto;
     justify-content: center;
-    background: linear-gradient(#e09f3e, #dba657);
+    background: linear-gradient(#9777de, #e6e3e0);
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 30px;
     box-shadow: -8px 8px 8px #000;
-    border-radius: 15px;
+    border-radius: 30px;
   }
   
   .create_title {
-    color: #fff;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    color: #050404;
+   
   }
   
   .create_items {
     display: flex;
-    margin: 30px 0;
-    flex-direction: column;
+    margin: 10px 0;
+    flex-direction:column;
   }
   
   .create_label {
     font-family: "Dongle", sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 500;
-    color: #1c0d02;
+    color: #070707;
     display: flex;
   }
   
@@ -45,7 +45,7 @@
   .create_select {
     margin: auto;
     width: 300px;
-    height: 40px;
+    height: 50px;
     background: transparent;
     border: 1px solid #1c0d02;
     border-radius: 3px;
@@ -58,20 +58,20 @@
   
   .create_options {
     height: 10px !important;
-    font-family: "Dongle", sans-serif;
-    font-size: 25px;
-    font-weight: 200;
-    background-color: #fff3b0;
+    font-family: fantasy;
+    font-size: 20px;
+    font-weight: 100;
+    background-color:rgba(153, 158, 232, 0.5)
   }
   
   .create_options:hover {
-    background-color: #e09f3e96;
+    background-color: rgba(153, 158, 232, 0.5)
   }
   
   .create_error {
     font-family: "Dongle", sans-serif;
     font-size: 25px;
-    color: #ff0000;
+    color: #060606;
   }
   
   .create_temperament {
@@ -84,18 +84,14 @@
     justify-content: center;
   }
   
-  .create_temperament p {
-    margin: 0 5px;
-    padding: 0 5px;
-    border-left: 1px solid #000;
-  }
+
   
   .create_delete {
     background-color: transparent;
-    margin: 3px;
+    margin: 0px;
     border: none;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
   }
   
@@ -103,7 +99,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 35px;
+    height: 30px;
     padding-right: 5px;
     position: relative;
   }
@@ -144,26 +140,26 @@
   
   .create_text {
     font-family: "Dongle", sans-serif;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 10px;
+    font-weight: 1000;
     color: #1c0d02;
   }
   
   .create_home {
-    margin-right: 20px;
+    margin-right: 30px;
     width: 100px;
   }
   
   .create_create {
-    width: 180px;
+    width: 130px;
   }
   
   .contenedor_searchBar--create {
-    margin: 0 10px;
+    margin: 0px;
   }
   
   .details_links--home {
-    padding-top: 5px;
+    padding-top: 10px;
   }
   
   @media (max-width: 600px) {
@@ -172,21 +168,16 @@
     }
   
     .create_label {
-      font-size: 30px;
+      font-size: 10px;
     }
   
-    .create_select {
-      width: 145px;
-      font-size: 17px;
-      font-weight: 600;
-    }
   
     .create_options {
-      font-size: 17px;
-      font-weight: 600;
+      font-size: 10px;
+      font-weight: 1000;
     }
   
     .create_create {
-      width: 146px;
+      width: 0px;
     }
   }

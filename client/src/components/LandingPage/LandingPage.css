@@ -1,64 +1,56 @@
-/* LandingPage.css */
 
-/* Estilos generales */
-.landing-contenedor {
+.landing-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://futbol.radioformula.com.mx/resizer/w0UJczUuAWouBEeB7XmgSVSM2to=/1200x675/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/radioformula/POXBAICPYBEDDBOFIGDDLBA32Q.jpg'); /* Ruta a la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
-    background-color: #f0f0f0; /* Color de fondo de respaldo */
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/group-portrait-of-adorable-puppies-royalty-free-image-1687451786.jpg?crop=0.503xw:1.00xh;0.433xw,0&resize=1200:*');
+    background-size: cover;
+    background-position: center;
 }
 
-.landing-image {
+
+
+.content {
+    background-color: rgba(153, 158, 232, 0.5); 
+    padding: 20px;
+    border-radius: 10px; 
     text-align: center;
+   
+   text-align: center;
+    color: rgb(1, 7, 10);
 }
 
-.landing-text {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+h1 {
+    font-size: 3rem;
+    font-family: fantasy;
 }
 
-.landing-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.landing-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.landing-button:hover {
-    background-color: #0056b3;
-}
-
-.icon {
+p {
     font-size: 1.5rem;
-    margin-right: 0.5rem;
+    font-family: cursive;
+    margin-bottom: 1rem;
+    padding-top: 0%;
 }
 
-/* Estilos responsivos */
+
+.home-button {
+    background-color: black;
+    color:rgba(153, 158, 232, 0.5);  ;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: fantasy;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .home-button:active {
+    background-color: gray; 
+  }
+
 @media (max-width: 768px) {
-    .landing-text {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .landing-text {
-        font-size: 1rem;
+    .content {
+        padding: 20px;
     }
 }

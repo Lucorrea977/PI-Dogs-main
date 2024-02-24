@@ -28,10 +28,11 @@
     display: flex;
     height: 100%;
     align-items: center;
+    font-family: fantasy;
   }
   
   .filter_link:hover {
-    background-color: #e09f3e96;
+    background-color: #8a89d796;
   }
   
   .filter_arrow {
@@ -53,7 +54,7 @@
     right: 0;
     width: 150px;
     transform: translateY(100%);
-    background-color: #fff3b0;
+    background-color: #f8f8f9;
   }
   
   .filter_link--inside {
@@ -62,14 +63,14 @@
   }
   
   .filter_link--inside:hover {
-    background-color: #e09f3e96;
+    background-color: #a0a5f596;
   }
   
   .filter_hamburguer {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 10px;
     cursor: pointer;
     display: none;
   }

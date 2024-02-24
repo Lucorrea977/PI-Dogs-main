@@ -8,7 +8,7 @@
   .order_item {
     list-style: none;
     position: relative;
-    height: 100%;
+    height: 50%;
     --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
     --transform: rotate(-90deg);
   }
@@ -21,17 +21,18 @@
   .order_link {
     background-color: transparent;
     border: none;
-    width: 150px;
+    width: 50px;
     color: #1c0d02;
     text-decoration: none;
-    padding: 0 30px;
+    padding: 0 50px;
     display: flex;
     height: 100%;
     align-items: center;
+    font-family: fantasy;
   }
   
   .order_link:hover {
-    background-color: #e09f3e96;
+    background-color: #9085f396;
   }
   
   .order_arrow {
@@ -51,19 +52,20 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 150px;
+    width: 100px;
     transform: translateY(100%);
-    background-color: #fff3b0;
+    background-color: #fcfcfb;
   }
   
   .order_link--title {
-    background-color: #e09f3e;
-    padding: 10px 5px;
-    height: 30px;
+    background-color: #b096ec;
+    right: inherit;
+    padding: 5px 5px;
+    height:   40px;
   }
   
   .order_link--title:hover {
-    background-color: #e09f3e;
+    background-color: #8b82f4;
   }
   
   .order_link--inside {
@@ -72,7 +74,8 @@
   }
   
   .order_link--inside:hover {
-    background-color: #e09f3e96;
+    background-color:rgba(153, 158, 232, 0.5);
+    display:flex;
   }
   
   .order_hamburguer {
