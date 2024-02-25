@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
 import { createDog, getTemperament } from "../../redux/actions/index";
 import icon from "../../assets/collar-de-perro.png";
 import "./CreateDog.css";

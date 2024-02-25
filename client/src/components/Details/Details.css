@@ -86,10 +86,13 @@
   border: 5px solid #09090a;
   padding: 10px;
   border-radius: 5px;
+ 
 }
 
 .details_subtitle {
   margin-bottom: 60px;
+  font-family: fantasy;
+  font-size:larger;
 }
 
 .details_icons {
