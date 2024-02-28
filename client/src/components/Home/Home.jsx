@@ -6,7 +6,6 @@ import Paginado from "../Paginado/Paginado.jsx";
 import SearchBar from "../SearchBar/SearchBar";
 import DogIcon from "../../assets/DogIcon.jpg";
 import Loadingbar from "../../assets/Loading.gif";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -20,7 +19,7 @@ export default function Home() {
   const length = allDogs?.length;
   const [loading, setLoading] = useState(true);
   const [, setError] = useState(false);
-  var counter = currentDogs?.length;
+
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -39,8 +38,8 @@ export default function Home() {
     return (
       <div className="loading-background">
         <img src={Loadingbar} className="loading_icon" alt="Please wait" />
-        <br />
-
+       <br/>
+        
       </div>
     );
   }
@@ -79,20 +78,6 @@ export default function Home() {
           );
         })}
       </div>
-      {counter > 3 ? (
-        <Paginado
-          dogsPage={dogsPage}
-          allDogs={length}
-          currentPage={currentPage}
-          paginado={paginado}
-        />
-      ) : (
-        <></>
-      )}
-
-      <Link to="/">
-        <button className="landing-button"> Back Landing </button>
-      </Link>
     </div>
   );
 }

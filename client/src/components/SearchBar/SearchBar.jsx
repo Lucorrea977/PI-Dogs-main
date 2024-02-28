@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getDogs, getName } from "../../redux/actions/index";
-
 import icon from "../../assets/collar-de-perro.png";
+
 import FiltersOrders from "../FiltersOrders/FiltersOrders.jsx";
 
 import { HiSearch } from "react-icons/hi";
