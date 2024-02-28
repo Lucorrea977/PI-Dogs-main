@@ -303,4 +303,4 @@ export default function CreateDog() {
       </div>
     </div>
   );
-}
+};

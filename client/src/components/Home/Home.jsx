@@ -6,8 +6,7 @@ import Paginado from "../Paginado/Paginado.jsx";
 import SearchBar from "../SearchBar/SearchBar";
 import DogIcon from "../../assets/DogIcon.jpg";
 import Loadingbar from "../../assets/Loading.gif";
-import { Link } from "react-router-dom"; // Importa Link desde react-router-dom
-import "./Home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -41,7 +40,7 @@ export default function Home() {
       <div className="loading-background">
         <img src={Loadingbar} className="loading_icon" alt="Please wait" />
         <br />
-      
+
       </div>
     );
   }

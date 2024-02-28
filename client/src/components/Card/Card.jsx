@@ -26,4 +26,4 @@ export default function Card({ name, image, temperament, weight, id }) {
             </Link>
         </div>
     );
-}
+};
