@@ -5,7 +5,7 @@
   .SearchBar-contenador-nav {
     position: relative;
     z-index: 2;
-    background-color: #06050a;
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -151,7 +151,7 @@
   
   .Search_btn-submit {
     background: transparent;
-    color: #5b53e5;
+    color: #aaa6fb;
     width: 43px;
     height: 43px;
     font-size: 20px;

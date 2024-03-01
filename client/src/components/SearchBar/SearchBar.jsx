@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getDogs, getName } from "../../redux/actions/index";
-import icon from "../../assets/collar-de-perro.png";
 
 import FiltersOrders from "../FiltersOrders/FiltersOrders.jsx";
 
@@ -31,18 +30,11 @@ export default function SearchBar({ pagina, set }) {
     setName("");
   }
 
-
-
   return (
     <nav className="contenedor-SearchBar">
       <div className="SearchBar-contenador-nav">
         <div className="SearchBar-logo">
-          <img
-            src={icon}
-            alt=""
-            className="SearchBar_icon"
-            onClick={(e) => handleClickAllDogs(e)}
-          />
+       
           <Link to="/create">
             <button className="searchBar_create">
               <p className="SearchBar_text">CREATE YOUR DOG</p>

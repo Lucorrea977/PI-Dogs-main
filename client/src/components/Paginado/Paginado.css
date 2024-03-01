@@ -13,16 +13,16 @@
 
 .paginado_current {
     background-color: transparent;
-    color: #392388;
+    color: #040406;
     font-weight: 800;
-    border: 2px solid  #392388;
-    border-radius: 5px;
+    border: 5px solid  #070708;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .paginado_icon {
     cursor: pointer;
-    color: #392388;
+    color: #020203;
 }
 
 .paginado_buttons {

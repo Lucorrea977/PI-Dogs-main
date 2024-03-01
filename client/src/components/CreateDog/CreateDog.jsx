@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { createDog, getTemperament } from "../../redux/actions/index";
-import icon from "../../assets/collar-de-perro.png";
+
 import "./CreateDog.css";
 
 function validate(form) {
@@ -142,18 +142,7 @@ export default function CreateDog() {
     <div>
       <nav className="contenedor-SearchBar contenedor_searchBar--create">
         <div className="searchBar-contenador-nav">
-          <Link to="/home" className="details_links--home">
-            <img src={icon} alt="" className="searchBar_icon" />
-          </Link>
-          <Link to="/create">
-            <button
-              className="create_link create_create"
-              onClick={(e) => handleSubmit(e)}
-            >
-              <p className="create_text">CREATE YOUR DOG</p>
-            </button>
-          </Link>
-          <Link to="/home">
+        <Link to="/home">
             <button className="create_link create_home">
               <p className="create_text">HOME</p>
             </button>
@@ -278,11 +267,10 @@ export default function CreateDog() {
             </select>
             <div className="create_temperament">
               {form.temperament.map((e, i) => (
-                <p>
+                <p key={i}>
                   {e}
                   <button
                     className="create_delete"
-                    key={i}
                     value={e}
                     onClick={(e) => deleteTemperament(e)}
                   >
@@ -303,4 +291,4 @@ export default function CreateDog() {
       </div>
     </div>
   );
-};
+}

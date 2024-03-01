@@ -1,183 +1,209 @@
-/* CreateDog.css */
 .create_contenedor {
-    position: relative;
-    width: 30%;
-    height: max-content;
-    left: 0;
-    top: 0;
-    margin: 20px auto;
-    justify-content: center;
-    background: linear-gradient(#9777de, #e6e3e0);
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    box-shadow: -8px 8px 8px #000;
-    border-radius: 30px;
-  }
-  
-  .create_title {
-    color: #050404;
-   
-  }
-  
-  .create_items {
-    display: flex;
-    margin: 10px 0;
-    flex-direction:column;
-  }
-  
-  .create_label {
-    font-family: "Dongle", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: #070707;
-    display: flex;
-  }
-  
-  .create_input {
-    background-color: transparent;
-    border: none;
-    height: 30px;
-    border-bottom: 1px solid #1c0d02;
-    outline: none;
-  }
-  
-  .create_select {
-    margin: auto;
-    width: 300px;
-    height: 50px;
-    background: transparent;
-    border: 1px solid #1c0d02;
-    border-radius: 3px;
-    padding-left: 10px;
-    font-family: "Dongle", sans-serif;
-    font-size: 25px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .create_options {
-    height: 10px !important;
-    font-family: fantasy;
-    font-size: 20px;
-    font-weight: 100;
-    background-color:rgba(153, 158, 232, 0.5)
-  }
-  
-  .create_options:hover {
-    background-color: rgba(153, 158, 232, 0.5)
-  }
-  
-  .create_error {
-    font-family: "Dongle", sans-serif;
-    font-size: 25px;
-    color: #060606;
-  }
-  
-  .create_temperament {
-    position: relative;
-    flex-direction: row;
-    margin: 10px;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+ 
+  width: 40%;
+  height: max-content;
+  margin: 20px auto;
+  background: rgba(198, 176, 242, 0.7);
+ 
+  padding: 20px;
+  box-shadow: -10px 8px 8px #050505;
+  border-radius: 20px;
+  top: 85px;
+}
 
-  
-  .create_delete {
-    background-color: transparent;
-    margin: 0px;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  
-  .create_link {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    height: 30px;
-    padding-right: 5px;
-    position: relative;
-  }
-  
-  .create_link::after {
-    content: "";
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: #000;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .create_link:hover::after {
-    transform: scaleX(1);
-  }
-  
-  .create_link::before {
-    margin-left: 3px;
-    content: "";
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
-    position: absolute;
-    right: 0;
-    width: 1px;
-    height: 35px;
-    background: #000;
-    transform: scaleY(0);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .create_link:hover::before {
-    transform: scaleY(1);
-  }
-  
-  .create_text {
-    font-family: "Dongle", sans-serif;
-    font-size: 10px;
-    font-weight: 1000;
-    color: #1c0d02;
-  }
-  
+.create_title {
+  color: #050404;
+}
+
+.create_items {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.create_label {
+  font-family: fantasy;
+  font-size: 20px;
+  font-weight: 500;
+  color: #040303;
+}
+
+.create_input {
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  border-bottom: 1px solid #2e037e;
+  outline: none;
+}
+
+.create_select {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 1px solid #0a0a0a;
+  border-radius: 3px;
+  padding-left: 10px;
+  font-family: fantasy;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.create_options {
+  font-family: fantasy;
+  font-size: 20px;
+  font-weight: 100;
+  background-color: rgba(153, 158, 232, 0.5);
+}
+
+.create_options:hover {
+  background-color: rgba(153, 158, 232, 0.5);
+}
+
+.create_error {
+  font-family: "Dongle", sans-serif;
+  font-size: 25px;
+  color: #f40404;
+}
+
+.create_temperament {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+.create_delete {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.create_link {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  padding-right: 5px;
+  position: relative;
+}
+
+.create_link::after,
+.create_link::before {
+  content: "";
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.create_link::after {
+  left: 0;
+  bottom: 0;
+}
+
+.create_link::before {
+  content: "";
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: 35px;
+  background: rgba(2, 2, 2, 0);
+  transform: scaleY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.create_link:hover::after,
+.create_link:hover::before {
+  transform: scaleX(1);
+  transform: scaleY(1);
+}
+
+.create_text {
+  font-family: fantasy;
+  font-size: 15px;
+  font-weight: 1000;
+  color: #040404;
+
+}
+
+.create_home {
+  margin-right: 2vw; 
+  width: 10vw; 
+  font-family: fantasy;
+  font-size: 5vw; 
+  padding-top: 1vw; 
+  left: 65%; 
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 5vw; 
+  top:720px;
+}
+@media screen and (max-width: 768px) {
+ 
   .create_home {
-    margin-right: 30px;
-    width: 100px;
+    width: 10vw;
+    font-size: 10vw;
+    padding-top: 2vw;
+    bottom: 3vw;
+    
   }
-  
+}
+
+.create_create {
+  top: 2px;
+ 
+}
+
+.contenedor_searchBar--create {
+  margin: 0px;
+}
+
+.details_links--home {
+  padding-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .create_contenedor {
+    width: 50%;
+  }
+
+  .create_label {
+    font-size: 16px;
+  }
+
+  .create_options {
+    font-size: 16px;
+    font-weight: 1000;
+  }
+
   .create_create {
-    width: 130px;
+    width: 0px;
   }
-  
-  .contenedor_searchBar--create {
-    margin: 0px;
+}
+
+@media (max-width: 600px) {
+  .create_contenedor {
+    width:70%;
   }
-  
-  .details_links--home {
-    padding-top: 10px;
+
+  .create_label {
+    font-size: 14px;
   }
-  
-  @media (max-width: 600px) {
-    .create_contenedor {
-      width: 90%;
-    }
-  
-    .create_label {
-      font-size: 10px;
-    }
-  
-  
-    .create_options {
-      font-size: 10px;
-      font-weight: 1000;
-    }
-  
-    .create_create {
-      width: 0px;
-    }
+
+  .create_options {
+    font-size: 14px;
+    font-weight: 1000;
   }
+
+  .create_create {
+    width: 0px;
+  }
+}

@@ -1,12 +1,12 @@
 .contenido-filters{
-    background-color:rgba(153, 158, 232, 0.5);
+   
     display:flex;
     flex-direction: row;
     align-items:center;
     justify-content:space-around;
-    margin: 0 20px 0 20px;
+    margin: 0 200px 0 50px;
     max-width: 100%;
-    height: 5px;
+    height: 20px;
     border: none;
     transform: translateY(-100%);
     transition: .3s;
@@ -23,8 +23,8 @@
     
 }
 .filtersOrders_icon{
-    margin: 50px;
-    max-width: 100%;
+    margin: 200px;
+    max-width: 200%;
     max-height: 100%;
     cursor: pointer;
 }

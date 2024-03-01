@@ -25,8 +25,8 @@
 .temperament_link{
     background-color: transparent;
     border: none;
-    width: 132px;
-    color: #1c0d02;
+    width: 130px;
+    color: #060606;
     text-decoration: none;
     display: flex;
     height: 100%;
@@ -35,7 +35,7 @@
 }
 
 .temperament_link:hover{
-    background-color: #8481ec96;
+    background-color: transparent;
 }
 
 .temperament_arrow{
@@ -44,8 +44,8 @@
     transition: transform .2s;
     display: block;
     margin-left: 3px;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
 }
 
 .temperament_nesting{
@@ -59,7 +59,7 @@
     width: 120px;
     height: 350px;
     transform: translateY(100%);
-    background-color: #f8f8f8;
+    background-color: rgb(156, 168, 240);
     overflow-y: scroll;
     overflow-x: none;
 }
