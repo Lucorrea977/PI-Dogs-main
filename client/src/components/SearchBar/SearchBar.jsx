@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { getDogs, getName } from "../../redux/actions/index";
+import {  getName } from "../../redux/actions/index";
 
 import FiltersOrders from "../FiltersOrders/FiltersOrders.jsx";
 
@@ -12,11 +12,7 @@ export default function SearchBar({ pagina, set }) {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
-  function handleClickAllDogs(e) {
-    e.preventDefault();
-    pagina(1);
-    dispatch(getDogs(e.target.value));
-  }
+
 
   function handleInputChange(e) {
     e.preventDefault();
