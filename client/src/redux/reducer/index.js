@@ -1,3 +1,4 @@
+
 import {
   ADD_Dog,
   FILTER_CREATE,
@@ -8,6 +9,7 @@ import {
   GET_TEMPERAMENT,
   ORDER_AS,
   ORDER_WEIGHT,
+
 } from "../actions/types.js";
 
 const initialState = {
@@ -136,4 +138,4 @@ export default function rootReducer(state = initialState, action) {
         state,
       };
   }
-};
+}

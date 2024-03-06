@@ -1,10 +1,9 @@
 import React from "react";
-import { CgArrowLeftO, CgArrowRightO } from "react-icons/cg";
-import './Paginado.css'
+import './Paginado.css';
 
 export default function Paginado({ dogsPage, allDogs, paginado, currentPage }) {
     const pageNumber = [];
-    var paginadoTotal = Math.floor(allDogs / dogsPage) + 1;
+    let paginadoTotal = Math.floor(allDogs / dogsPage) + 1;
     for (let i = 0; i <= Math.floor(allDogs / dogsPage); i++) {
         pageNumber.push(i + 1)
     }
@@ -28,9 +27,11 @@ export default function Paginado({ dogsPage, allDogs, paginado, currentPage }) {
             <nav>
                 <ul className="paginado_contenedor">
                     <li>
-                        <CgArrowLeftO
+                        <button
                             onClick={e => handleBack(e)}
-                            className='paginado_icon paginado' />
+                            className='paginado_button paginado'>
+                            {"⬅"}
+                        </button>
                     </li>
                     <li className="paginado_buttons">
                         <button
@@ -44,9 +45,11 @@ export default function Paginado({ dogsPage, allDogs, paginado, currentPage }) {
                         </button>
                     </li>
                     <li>
-                        <CgArrowRightO
+                        <button
                             onClick={e => handleNext(e)}
-                            className='paginado_icon paginado' />
+                            className='paginado_button paginado'>
+                            {"⮕ "}
+                        </button>
                     </li>
                 </ul>
             </nav>

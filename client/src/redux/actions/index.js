@@ -8,7 +8,10 @@ import {
   ORDER_WEIGHT,
   GET_NAME,
   GET_DETAILS,
+
 } from "./types";
+
+
 
 export function getDogs() {
   return async function (dispatch) {
@@ -31,19 +34,18 @@ export function getTemperament() {
 }
 
 export function createDog(payload) {
-  return async function (dispatch) {
+  return async function () {
     try {
-      // Extraer los temperamentos seleccionados del payload
+  
       const { temperament, ...dogData } = payload;
 
-      // Enviar tanto la información del perro como los temperamentos seleccionados al servidor
+   
       const response = await axios.post(`/dogs`, { ...dogData, temperament });
 
-      // Si la creación del perro es exitosa, puedes devolver la respuesta del servidor
       return response;
     } catch (error) {
       console.error("Error creating dog:", error);
-      // Puedes lanzar o manejar el error aquí según sea necesario
+
       throw error;
     }
   };

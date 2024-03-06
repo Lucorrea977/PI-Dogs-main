@@ -75,7 +75,7 @@ const createDog = async (req, res, next) => {
       createInDb,
     } = req.body;
 
-    const createDog = await Dog.create({
+    const newDog = await Dog.create({
       name,
       life_span,
       height_min,
@@ -84,22 +84,27 @@ const createDog = async (req, res, next) => {
       weight_max,
       origin,
       image,
+      temperament,
       createInDb,
     });
 
-    const dogTemperament = await Temperament.findAll({
+    const dogTemperament = await Temperament.findOne({
       where: {
         name: temperament,
       },
     });
 
-    await createDog.addTemperament(dogTemperament);
+    if (!dogTemperament) {
+    
+      throw new Error('Temperament not found');
+    }
+
+    await newDog.addTemperament(dogTemperament);
     res.status(200).send("Dog created successfully");
   } catch (error) {
     next(error);
   }
 };
-
 module.exports = {
   getDogsByName,
   getDogById,

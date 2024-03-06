@@ -1,27 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDetails } from '../../redux/actions/index';
 import Loading from '../../assets/Loading.gif';
-import { GiWeight, GiSittingDog } from 'react-icons/gi';
-import { VscSymbolRuler } from 'react-icons/vsc';
-import { AiOutlineHeart } from 'react-icons/ai';
-import { MdOutlineAddReaction } from 'react-icons/md';
 import './Details.css';
 
 export default function Details() {
     const dispatch = useDispatch();
     const dogsDetails = useSelector((state) => state.details);
     const { id } = useParams(); 
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        dispatch(getDetails(id));
+        setLoading(true); 
+        dispatch(getDetails(id))
+            .then(() => setLoading(false));
     }, [id, dispatch]);
 
     return (
         <div>
-            {
-                dogsDetails ?
+            {loading ? ( 
+                <div>
+                    <img src={Loading} alt="" className='loading_icon'/>
+                </div>
+            ) : (
                 <div>
                     <nav className='contenedor-SearchBar contenedor_searchBar--details'>
                         <div className='searchBar-contenador-nav'>
@@ -46,7 +48,6 @@ export default function Details() {
                                 ? dogsDetails.name
                                 : dogsDetails[0].name}
                                 </h1>
-                                <GiSittingDog className='details_name_icon'/> 
                             </div>
                             <div className='details_contenedor_img'>
                                 <img className='img-Details'
@@ -58,7 +59,7 @@ export default function Details() {
                         </div>
                         <div className='contenido-Details'>
                             <div className='details_items'>
-                                <h3 className='details_subtitle'>Height <VscSymbolRuler className='details_icons'/> </h3>
+                                <h3 className='details_subtitle'>Height </h3>
                                 {dogsDetails.height ?
                                     <p>{dogsDetails.height} cm</p>
                                     : <p>
@@ -66,7 +67,7 @@ export default function Details() {
                                         </p>}
                             </div>
                             <div className='details_items'>
-                                <h3 className='details_subtitle'>Weight <GiWeight className='details_icons'/> </h3>
+                                <h3 className='details_subtitle'>Weight </h3>
                                 {dogsDetails.weight ?
                                     <p>{dogsDetails.weight} kg</p>
                                     : <p>
@@ -74,14 +75,14 @@ export default function Details() {
                                         </p>}
                             </div>
                             <div className='details_items'>
-                                <h3 className='details_subtitle'>Life span <AiOutlineHeart className='details_icons'/> </h3>
+                                <h3 className='details_subtitle'>Life span </h3>
                                 {dogsDetails.life_span ?
                                     <p>{dogsDetails.life_span}</p> :
                                     <p>{dogsDetails[0].life_span} years</p>
                                 }
                             </div>
                             <div className='details_items'>
-                                <h3 className='details_subtitle'>Temperament <MdOutlineAddReaction className='details_icons'/> </h3>
+                                <h3 className='details_subtitle'>Temperament </h3>
                                 <p>
                                     {dogsDetails.temperament ? 
                                         dogsDetails.temperament : 
@@ -93,11 +94,8 @@ export default function Details() {
                             </div>
                         </div>
                     </div>
-                </div> :
-                <div>
-                    <img src={Loading} alt="" className='loading_icon'/>
                 </div>
-            }
+            )}
         </div>
     )
 };

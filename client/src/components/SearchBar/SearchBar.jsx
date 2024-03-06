@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {  getName } from "../../redux/actions/index";
+import { getName } from "../../redux/actions/index";
 
 import FiltersOrders from "../FiltersOrders/FiltersOrders.jsx";
 
-import { HiSearch } from "react-icons/hi";
 import "./SearchBar.css";
 
 export default function SearchBar({ pagina, set }) {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
-
-
 
   function handleInputChange(e) {
     e.preventDefault();
@@ -30,7 +27,6 @@ export default function SearchBar({ pagina, set }) {
     <nav className="contenedor-SearchBar">
       <div className="SearchBar-contenador-nav">
         <div className="SearchBar-logo">
-       
           <Link to="/create">
             <button className="searchBar_create">
               <p className="SearchBar_text">CREATE YOUR DOG</p>
@@ -42,7 +38,6 @@ export default function SearchBar({ pagina, set }) {
             </button>
           </Link>
         </div>
-
         <div className="SearchBar-create-icon">
           <div className="SearchBar_search">
             <form onSubmit={handleSubmit}>
@@ -53,8 +48,8 @@ export default function SearchBar({ pagina, set }) {
                 onChange={handleInputChange}
               />
               <div className="SearchBar_btn">
-                <button className="Search_btn-submit">
-                  <HiSearch />
+                <button className="Search_btn-submit" type="submit">
+                🔍
                 </button>
               </div>
             </form>
