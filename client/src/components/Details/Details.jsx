@@ -48,6 +48,7 @@ export default function Details() {
                                 ? dogsDetails.name
                                 : dogsDetails[0].name}
                                 </h1>
+                                <p>ID: {id}</p>
                             </div>
                             <div className='details_contenedor_img'>
                                 <img className='img-Details'

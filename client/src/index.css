@@ -1,7 +1,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://news.harvard.edu/wp-content/uploads/2023/11/dog_brains_2500.png');
+  background-color: rgb(226, 223, 241);
   background-size: 100vw 100vh;
   
 }
