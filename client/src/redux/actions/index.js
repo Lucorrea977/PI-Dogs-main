@@ -9,6 +9,7 @@ import {
   GET_NAME,
   GET_DETAILS,
 
+
 } from "./types";
 
 
@@ -22,7 +23,6 @@ export function getDogs() {
     });
   };
 }
-
 export function getTemperament() {
   return async function (dispatch) {
     const temp = await axios.get(`/temperament`);
@@ -33,6 +33,8 @@ export function getTemperament() {
   };
 }
 
+
+   
 export function createDog(payload) {
   return async function () {
     try {
@@ -50,7 +52,6 @@ export function createDog(payload) {
     }
   };
 }
-
 export function filterTemperament(temperament) {
   return {
     type: FILTER_TEMPERAMENT,

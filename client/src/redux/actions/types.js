@@ -7,3 +7,4 @@ export const GET_TEMPERAMENT = "GET_TEMPERAMENT";
 export const FILTER_CREATE = "FILTER_CREATE";
 export const ORDER_WEIGHT = "ORDER_WEIGHT";
 export const ORDER_AS = "ORDER_AS";
+export const CREATE_DOG= "CREATE_DOG"

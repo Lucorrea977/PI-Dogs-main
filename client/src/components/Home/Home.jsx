@@ -14,8 +14,8 @@ export default function Home() {
   const [dogsPerPage] = useState(8);
   const indexOfLastDog = currentPage * dogsPerPage;
   const indexOfFirstDog = indexOfLastDog - dogsPerPage;
-  const currentDogs = allDogs.slice(indexOfFirstDog, indexOfLastDog);
-  const length = allDogs.length;
+  const currentDogs = allDogs ? allDogs.slice(indexOfFirstDog, indexOfLastDog) : [];
+  const length = allDogs ? allDogs.length : 0;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 

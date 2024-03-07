@@ -10,6 +10,7 @@ import {
   ORDER_AS,
   ORDER_WEIGHT,
 
+
 } from "../actions/types.js";
 
 const initialState = {
@@ -63,29 +64,21 @@ export default function rootReducer(state = initialState, action) {
         dogs: action.payload === "allDogs" ? newAllFilter : createFilter,
       };
     case ORDER_AS:
-      const sortOrder =
-        action.payload === "asc"
-          ? state.dogs.sort(function (a, b) {
-            if (a.name.toLowerCase() < b.name.toLowerCase()) {
-              return -1;
-            }
-            if (a.name.toLowerCase() > b.name.toLowerCase()) {
-              return 1;
-            }
-            return 0;
-          })
-          : state.dogs.sort(function (a, b) {
-            if (a.name.toLowerCase() < b.name.toLowerCase()) {
-              return 1;
-            }
-            if (a.name.toLowerCase() > b.name.toLowerCase()) {
-              return -1;
-            }
-            return 0;
-          });
+      const sortedDogs = [...state.dogs];
+      sortedDogs.sort(function (a, b) {
+        const nameA = a.name.toLowerCase();
+        const nameB = b.name.toLowerCase();
+        if (nameA < nameB) {
+          return action.payload === "asc" ? -1 : 1;
+        }
+        if (nameA > nameB) {
+          return action.payload === "asc" ? 1 : -1;
+        }
+        return 0;
+      });
       return {
         ...state,
-        dogs: sortOrder,
+        dogs: sortedDogs,
       };
     case ORDER_WEIGHT:
       const weight = state.dogs.filter(
@@ -127,15 +120,15 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         dogs: action.payload === "weight" ? state.filter : orderW,
       };
-    case ADD_Dog:
-      return {
-        ...state,
-        dogs: [...state.dogs, action.payload],
-      };
-
-    default:
-      return {
-        state,
-      };
+      case ADD_Dog:
+        return {
+          ...state,
+          dogs: [...state.dogs, action.payload],
+        };
+  
+      default:
+        return {
+          state,
+        };
+    }
   }
-}
