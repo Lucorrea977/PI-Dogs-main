@@ -59,7 +59,6 @@ const getDogById = async (req, res, next) => {
     next(err);
   }
 };
-
 const createDog = async (req, res, next) => {
   try {
     const {
@@ -105,6 +104,7 @@ const createDog = async (req, res, next) => {
     next(error);
   }
 };
+
 module.exports = {
   getDogsByName,
   getDogById,
