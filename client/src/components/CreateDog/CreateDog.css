@@ -127,23 +127,25 @@
 
 .create_text {
   font-family: fantasy;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 1000;
   color: #040404;
 
 }
 
 .create_home {
-  margin-right: 2vw; 
-  width: 10vw; 
-  font-family: fantasy;
-  font-size: 5vw; 
-  padding-top: 1vw; 
-  left: 65%; 
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 5vw; 
-  top:720px;
+  .create_home {
+    margin-right: 2vw;
+    width: 10vw;
+    font-family: fantasy;
+    font-size: 10vw;
+    padding-top: 5vw;
+    left: 65%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 5vw;
+    top: 790px;
+  }
 }
 @media screen and (max-width: 768px) {
  
